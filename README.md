@@ -1,0 +1,1 @@
+# NextTask - A To-Do list application that is deployed non Kubernetes Cluster and managed using GitOps
