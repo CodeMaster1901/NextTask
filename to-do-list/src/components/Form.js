@@ -1,9 +1,9 @@
 import React from "react";
 
-const Form = ({inputText,setInputText,todos,setTodos}) => {
+const Form = ({inputText,setInputText,todos,setTodos,setStatus}) => {
   // here we write Js code and functions
   const inputTextHandler = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setInputText(e.target.value);
   };
 
@@ -15,6 +15,11 @@ const Form = ({inputText,setInputText,todos,setTodos}) => {
     ]);
     setInputText("");
   };
+
+  const statuHandler = (e) => {
+    // console.log(e.target.value)
+    setStatus(e.target.value)
+  }
 
     return (
         <form>
@@ -30,7 +35,7 @@ const Form = ({inputText,setInputText,todos,setTodos}) => {
         </button>
 
         <div className="select">
-          <select name="todos" className="filter-todo">
+          <select onChange={statuHandler} name="todos" className="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
